@@ -1,2 +1,5 @@
 2025.09.26
 initial
+
+2025.09.27
+[*] adapted under python 3.8

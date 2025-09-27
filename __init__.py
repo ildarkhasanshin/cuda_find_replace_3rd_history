@@ -120,25 +120,13 @@ class Command:
         app_proc(PROC_SET_FINDER_PROP, dict(find_h = f_h))
 
     def on_state_findbar(self, ed_self, state, value):
-        match state:
-            case 'cmd':
-                match value:
-                    case 'FindNext' | 'FindPrev' | 'FindFirst':
-                        if self.get_fr_prop('is_replace'):
-                            self.add_fr()
-                        else:
-                            self.add_f()
-                    case 'Rep' | 'RepAll' | 'RepStop' | 'RepGlobal':
-                            self.add_fr()
-            case 'is_rep':
-                match value:
-                    case _:
-                        self.set_fr_h()
-            case 'opt':
-                match value:
-                    case 'RegEx':
-                        self.set_fr_h()
-            case 'focus':
-                match value:
-                    case 'edFind':
-                        self.set_fr_h()
+        if state == 'cmd':
+            if value == 'FindNext' or value == 'FindPrev' or value == 'FindFirst':
+                if self.get_fr_prop('is_replace'):
+                    self.add_fr()
+                else:
+                    self.add_f()
+            elif value == 'Rep' or value == 'RepAll' or value == 'RepStop' or value == 'RepGlobal':
+                self.add_fr()
+        elif state == 'is_rep' or ((state == 'opt' and value == 'RegEx') or (state == 'focus' and value == 'edFind')):
+            self.set_fr_h()
