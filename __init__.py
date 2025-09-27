@@ -121,12 +121,12 @@ class Command:
 
     def on_state_findbar(self, ed_self, state, value):
         if state == 'cmd':
-            if value == 'FindNext' or value == 'FindPrev' or value == 'FindFirst':
+            if value in ('FindNext', 'FindPrev', 'FindFirst'):
                 if self.get_fr_prop('is_replace'):
                     self.add_fr()
                 else:
                     self.add_f()
-            elif value == 'Rep' or value == 'RepAll' or value == 'RepStop' or value == 'RepGlobal':
+            elif value in ('Rep', 'RepAll', 'RepStop', 'RepGlobal'):
                 self.add_fr()
-        elif state == 'is_rep' or ((state == 'opt' and value == 'RegEx') or (state == 'focus' and value == 'edFind')):
+        elif state == 'is_rep' or (state == 'opt' and value == 'RegEx') or (state == 'focus' and value == 'edFind'):
             self.set_fr_h()
