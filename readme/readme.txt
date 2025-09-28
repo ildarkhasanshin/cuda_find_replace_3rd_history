@@ -1,5 +1,6 @@
 Plugin for CudaText
-Simple plugin for saving/displaying find-history in replace-dialog.
+By default, input-history is saved for find and replace fields.
+Plugin adds separate 3rd-find-history to the find/replace-dialog.
 
 "Plugins / Find-Replace-3rd-History / Remove" - remove specific entries from find-history in replace-dialog
 
