@@ -4,6 +4,7 @@ desc=Simple plugin for saving/displaying find-history in replace-dialog.
 type=cudatext-plugin
 subdir=cuda_find_replace_3rd_history
 homepage=https://github.com/ildarkhasanshin/cuda_find_replace_3rd_history
+api=1.0.465
 
 [item1]
 section=commands
