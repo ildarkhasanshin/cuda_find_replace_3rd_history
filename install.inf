@@ -1,14 +1,14 @@
 [info]
-title=Find-Replace-3rd-History
-desc=Simple plugin for saving/displaying find-history in replace-dialog.
+title=Find-Replace-Separate-History
+desc=By default, input-history is saved for find and replace fields. Plugin adds separate 3rd-find-history to the find/replace-dialog which saved to setting's json-file to key 'find_replace'.
 type=cudatext-plugin
-subdir=cuda_find_replace_3rd_history
-homepage=https://github.com/ildarkhasanshin/cuda_find_replace_3rd_history
+subdir=cuda_separate_find_replace_history
+homepage=https://github.com/ildarkhasanshin/cuda_separate_find_replace_history
 api=1.0.465
 
 [item1]
 section=commands
-caption=Find-Replace-3rd-History\&Remove
+caption=Find-Replace-Separate-History\&Remove
 method=remove
 
 [item2]
